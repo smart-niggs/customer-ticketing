@@ -1,0 +1,23 @@
+{
+  "admin": {
+    "email": "admin@fliq.pay",
+    "firstname": "Admin",
+    "lastname": "Fliq",
+    "password": "password",
+    "role_type": "admin"
+  },
+  "agent": {
+    "email": "agent@fliq.pay",
+    "firstname": "Agent",
+    "lastname": "Fliq",
+    "password": "password",
+    "role_type": "agent"
+  },
+  "customer": {
+    "email": "customer@fliq.pay",
+    "firstname": "Customer",
+    "lastname": "Fliq",
+    "password": "password",
+    "role_type": "customer"
+  }
+}

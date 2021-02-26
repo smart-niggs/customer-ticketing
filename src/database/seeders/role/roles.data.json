@@ -1,0 +1,50 @@
+{
+  "roles": [
+    {
+      "name": "admin",
+      "scopes": [
+        "read_agent",
+        "write_agent",
+        "update_agent",
+        "activate_agent",
+        "deactivate_agent",
+        "read_customer",
+        "read_comment",
+        "write_comment",
+        "read_ticket",
+        "write_ticket",
+        "update_ticket",
+        "read_report",
+        "close_ticket"
+      ],
+      "active": true
+    },
+    {
+      "name": "agent",
+      "scopes": [
+        "read_agent",
+        "update_agent",
+        "read_customer",
+        "read_comment",
+        "write_comment",
+        "read_ticket",
+        "write_ticket",
+        "update_ticket",
+        "read_report",
+        "close_ticket"
+      ],
+      "active": true
+    },
+    {
+      "name": "customer",
+      "scopes": [
+        "read_comment",
+        "write_comment",
+        "read_ticket",
+        "write_ticket",
+        "close_ticket"
+      ],
+      "active": true
+    }
+  ]
+}
