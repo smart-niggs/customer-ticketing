@@ -10,7 +10,7 @@ import { CreateUserDto } from 'src/modules/user/dto/create-user.dto';
 import { UserService } from 'src/modules/user/user.service';
 
 
-describe('AuthController', () => {
+describe.skip('AuthController', () => {
   let app: INestApplication;
   let userModel: Model<User>;
   let userService: UserService;
@@ -50,6 +50,16 @@ describe('AuthController', () => {
     });
 
     it('/(auth/sign-up) it should signup a new customer', (done) => {
+      // USE THIS INSTEAD!!!!
+      // const res = await request(app.getHttpServer())
+      //   .get(`/${item}/quantity`);
+      // expect(res.status).toEqual(200);
+      // expect(res.body).toHaveProperty('quantity');
+      // expect(res.body).toHaveProperty('validTill');
+      // done();
+
+
+      // DON  NOT USE
       return request(app.getHttpServer())
         .post('/auth/sign-up')
         .send(customer)
@@ -71,7 +81,7 @@ describe('AuthController', () => {
       catch (e) { }
     });
 
-    it('/(sign-up) it should not signup a existing customer', async (done) => {
+    it('/(auth/sign-up) it should not signup a existing customer', async (done) => {
       const res = await request(app.getHttpServer())
         .post('/auth/sign-up')
         .send(customer);

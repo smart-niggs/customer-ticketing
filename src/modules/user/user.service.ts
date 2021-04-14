@@ -52,6 +52,7 @@ export class UserService {
   }
 
   async findOne(id: string): Promise<User> {
+    // console.log('userModel.find({}): ' + JSON.stringify(await this.userModel.find({})));
     return this.userModel.findById(id)
       .select('-password -__v')
       .populate('role', 'scopes -_id')
